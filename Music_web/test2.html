@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title></title>
+	<script>
+	window.onload = downScripts;
+	
+	function downScripts() {
+	    var element = document.createElement("script");
+	    element.src = "js/test.js";
+	    document.body.appendChild(element);
+	}
+	</script>
+</head>
+<body>
+<!-- 
+<p>输入您的年龄然后点击这个按钮：</p>
+<input type="number" id="iii1" value="" />
+<input type="number" id="iii2" value="" />
+<button onclick="Fname()">试一试</button>
+<p id="aaa"></p>
+<p id="ggg"></p>
+<p id="demo"></p>
+<p id="ttt"></p>
+
+<button class="hanson">dianwo</button>
+<script type="text/javascript">
+	document.getElementsByClassName("hanson")[0].onclick=function(){
+		alert("hah")
+	} -->
+</script>
+
+
+<p>创建完美的计数器对象：</p>
+
+<p id="demo"></p>
+<button onclick="func1()">重置</button>
+<button onclick="func2()">+5</button>
+<button onclick="func3()">-5</button>
+<button onclick="func4()">递加1</button>
+<button onclick="func5()">递减1</button>
+
+<script>
+var obj = {
+counter : 0,
+get reset() {
+this.counter = 0;
+},
+ get increment() {
+ this.counter++;
+},
+ get decrement() {
+ this.counter--;
+ },
+ set add(value) {
+ this.counter += value;
+ },
+ set subtract(value) {
+ this.counter -= value;
+ }
+};
+// 操作计数器：
+function func1(){obj.reset;
+document.getElementById("demo").innerHTML = obj.counter;}
+function func2(){obj.add = 5;
+document.getElementById("demo").innerHTML = obj.counter;}
+function func3(){obj.subtract = 5;
+document.getElementById("demo").innerHTML = obj.counter;}
+function func4(){obj.increment;
+document.getElementById("demo").innerHTML = obj.counter;}
+function func5(){obj.decrement;
+document.getElementById("demo").innerHTML = obj.counter;}
+// 显示计数器：
+document.getElementById("demo").innerHTML = obj.counter;
+</script>
+</body>
+</html>
