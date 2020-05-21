@@ -1,0 +1,44 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+ul li{
+	list-style: none;
+}
+
+.boxa{
+	width: 200px;
+	height: 600px;
+	margin: 50px auto;
+	cursor: pointer;
+}
+
+.boxu{
+	border: 1px solid #333333;
+	color: #333333;
+	text-align: center;
+	height: 20px;
+}
+
+.boxa ul{
+	border: 1px solid #333333;
+	border-top: none;
+	display: none;
+}
+
+.boxa li{
+	border-bottom: 1px dashed #333333;
+	text-align: center;
+	height: 20px;
+	cursor: pointer;
+	
+}
+.boxa li:last-child{
+	border-bottom: none;
+}
+
+.boxa li:hover{
+	background-color: #C600FF;
+}
+
