@@ -24,7 +24,7 @@ ul{
 	clear: both;
 }
 
-.outContainer::-webkit-scrollbar {  
+.outContainer::-webkit-scrollbar {
             width:0 !important;   /* remove scrollbar space */
             background: transparent;  /* optional: just make scrollbar invisible */
         }
@@ -209,6 +209,15 @@ body{
 }
 
 
+.section_back {
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px 0;
+	border-radius: 2%;
+	position: relative;
+}
+
+
 .section {
     overflow: hidden;
     width: 100%;
@@ -342,7 +351,7 @@ body{
 	width: 480px;
 	height: 270px;
 	background-color: rgba(1,1,1,0.5);
-	
+
 	float: left;
 }
 
@@ -370,7 +379,7 @@ body{
 	background-size: 100%;
 	position: relative;
 	overflow: hidden;
-	
+
 }
 .title01:before{
 	background: rgba(0,0,0,0.4);
