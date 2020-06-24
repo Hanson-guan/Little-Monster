@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/music_test.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/line-awesome/css/line-awesome.css" />
+	</head>
+	<body>
+
+		<div class="song_player">
+			<!-- 歌曲播放器 -->
+			<audio id="main-audio">
+				<source src="img/music01.mp3" type="audio/mp4">
+			</audio>
+			<!-- 专辑图片 -->
+			<div class="album-pic">
+				<img id="album-pic" src="img/dd.png">
+			</div>
+			<!-- 播放器控制 -->
+			<div class="player-ctrl">
+				<!-- 上一首 -->
+				<a id="previous" onclick="lastMusic()" class="next-pre-btn" ><i class="las la-chevron-circle-left"></i></a>
+				<!-- 播放/暂停 -->
+				<a id="podcast-play" onclick="playMusic()"><i class="las la-play-circle"></i></a>
+				<!-- 下一首 -->
+				<a id="next" onclick="nextMusic()" class="next-pre-btn" ><i class="las la-chevron-circle-right"></i></a>
+			</div>
+			
+			<!-- 歌曲进度条 -->
+			<div class="audio-right">
+				<p id="musicName" style="max-width: 200px;">Music Name</p>
+				<div class="progress-bar-bg" id="progressBarBg">
+					<span id="progressDot"></span>
+					<div class="progress-bar" id="progressBar"></div>
+				</div>
+				<div class="audio-time">
+					<span class="audio-length-current" id="audioCurTime">00:00</span>
+					<span id="audio-length-total" class="audio-length-total">00:00</span>
+				</div>
+			</div>
+			<!-- 静音按钮 -->
+			<div class="volumeMute">
+				<a class="muteButtom" onclick="mute()">
+					<img id="volumemute" class="volumemute" src="img/volumemute.png">
+				</a>
+			</div>
+			<!-- 音量控制 -->
+			<input type="range" class="rangeMain" id="volume" min="0" max="100" value="100" onchange="volumeway()">
+			<!-- 播放模式 -->
+			<div class="playmode-btn">
+				<a><img id="looppic" src="img/loop.png" onclick="changMode(),modetest()"></a>
+			</div>
+			<!-- 歌词 -->
+			<div class="lyrics-bg"></div><!-- 歌词显示盒子 -->
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/music_test.js"></script>
+</html>

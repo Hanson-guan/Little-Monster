@@ -1,0 +1,230 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+body {
+	background-color: #000000;
+	font-family: Poppins;
+}
+
+.lyrics-bg {
+	float: left;
+	width: 200px;
+	height: 45px;
+	margin: 0 0 0 20px;
+	color: #555555;
+	font-size: 8px;
+	overflow: hidden;
+	position: relative;
+	top: 2px;
+	font-family: Poppins;
+}
+
+.lyrics-bg ul {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	list-style: none;
+}
+
+.lyrics-bg ul li {
+	width: 100%;
+	height: 15px;
+	line-height: 15px;
+	text-align: center;
+}
+
+.lyrics-bg ul li.active {
+	/* 歌词高亮滚动区 */
+	color: #FFFFFF;
+	/* 歌词滚动高亮颜色 */
+	font-size: 12px;
+	/* 歌词滚动行文字大小 */
+}
+
+.song_player {
+	width: 100%;
+	height: 50px;
+	background-color: #111111;
+	box-shadow: 0px 15px 10px -15px #def3f8 inset;
+	color: #FFFFFF;
+	position: absolute;
+	bottom: 0;
+}
+
+.album-pic {
+	float: left;
+	padding: 4px 20px 0 20px;
+}
+
+.album-pic img {
+	width: 40px;
+	height: 40px;
+	border: 1px solid #FFFFFF;
+}
+
+.player-ctrl {
+	font-size: 38px;
+	padding: 0 20px 0 0;
+	float: left;
+	line-height: 0;
+	position: relative;
+	top: 7px;
+}
+
+.next-pre-btn {
+	font-size: 28px;
+	position: relative;
+	top: -3px;
+}
+
+/* ---------------------------------------- */
+.audio-right {
+	margin: 0 20px 0 0;
+	float: left;
+	width: 800px;
+	height: 100%;
+}
+
+.audio-right p {
+	width: 200px;
+	float: left;
+	font-size: 15px;
+	font-weight: 100;
+	margin: 15px 0 0 0;
+	/* 歌曲名称只显示在一行，超出部分显示为省略号 */
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 243px;
+	/* 要适配小屏幕手机，所以最大宽度先设小一点，后面js根据屏幕大小重新设置 */
+}
+
+.progress-bar-bg {
+	float: left;
+	background: #333333;
+	position: relative;
+	width: 400px;
+	left: 80px;
+	top: 25px;
+	height: 4px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.progress-bar {
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	height: 100%;
+	background: linear-gradient(90deg, #791FC9, #FF1493, #791FC9);
+	width: 0;
+}
+
+.progress-bar-bg span {
+	content: " ";
+	width: 10px;
+	height: 13px;
+	background-image: url(../img/white_logo.png);
+	background-repeat: no-repeat;
+	background-size: 10px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -8px;
+	margin-left: -5px;
+	cursor: pointer;
+}
+
+.audio-time {
+	overflow: hidden;
+	position: relative;
+	left: 30px;
+	top: 15px;
+	width: 500px;
+}
+
+.audio-length-total {
+	float: right;
+	font-size: 12px;
+}
+
+.audio-length-current {
+	float: left;
+	font-size: 12px;
+}
+
+.volumeMute {
+	float: left;
+	position: relative;
+	top: 15px;
+	left: -50px;
+}
+
+.muteButtom img {
+	width: 24px;
+}
+
+.rangeMain {
+	float: left;
+	background-color: #333333;
+	background: linear-gradient(#FFFFFF, #FFFFFF) no-repeat;
+	position: relative;
+	width: 100px;
+	left: -45px;
+	top: 25px;
+	height: 4px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	cursor: pointer;
+	outline: none;
+	-webkit-appearance: none;
+	/*清除系统默认样式*/
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+	height: 4px;
+	border-radius: 2px;
+	/*将轨道设为圆角的*/
+	box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112;
+	/*轨道内置阴影效果*/
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3),
+		0 3px 5px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	-webkit-appearance: none;
+	border: 0;
+	position: relative;
+	top: -2px;
+}
+
+.playmode-btn {
+	float: left;
+	position: relative;
+	top: 15px;
+	left: -20px;
+	
+}
+
+.playmode-btn a img{
+	width: 22px;
+}
